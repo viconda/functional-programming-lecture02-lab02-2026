@@ -340,7 +340,7 @@
           ]
         ]
       },
-      "code_excerpt": "original = [1, 2, 1]\nfrom collections.abc import Callable\n\nfrom copy import deepcopy\n\nfrom typing import Any\n\nactual = (lambda i: original[:i] + original[i + 1 :])(original.index(1))",
+      "code_excerpt": "original = [1, 2, 1]\n\n\n\nactual = (lambda i: original[:i] + original[i + 1 :])(original.index(1))",
       "code_excerpt_note": "Показан существенный фрагмент. Полная запускаемая программа с проверками находится в файле lecture/srs01.py."
     },
     {
