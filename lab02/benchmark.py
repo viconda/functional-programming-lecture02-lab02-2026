@@ -119,7 +119,9 @@ def display_results(results: dict[str, Any], saved: bool = False) -> None:
         print(f"\n{row['title']}")
         print("Время, с: " + "; ".join(f"{value:.6f}" for value in row["seconds"]))
         print(f"Медиана: {row['median_seconds']:.6f} с")
-        print(f"Пик памяти: {row['peak_bytes']} байт ({row['peak_bytes'] / 2**20:.3f} МиБ)")
+        print(
+            f"Пик памяти: {row['peak_bytes']} байт ({row['peak_bytes'] / 2**20:.3f} МиБ)"
+        )
         print(f"Результат: {row['result']}")
     print(f"\nПо формуле 4*m*(m+1)*(2*m+1)//6: {results['expected_result']}")
     print("Все три результата совпадают с точной формулой.")
@@ -128,7 +130,9 @@ def display_results(results: dict[str, Any], saved: bool = False) -> None:
 def main() -> None:
     """Выполнить измерение либо показать ранее сохранённый результат."""
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--show", action="store_true", help="показать сохранённый замер")
+    parser.add_argument(
+        "--show", action="store_true", help="показать сохранённый замер"
+    )
     args = parser.parse_args()
     if args.show:
         results = json.loads(RESULTS_PATH.read_text(encoding="utf-8"))

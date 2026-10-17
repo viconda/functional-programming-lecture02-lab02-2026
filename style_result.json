@@ -1,0 +1,16 @@
+{
+  "version": "ruff 0.17.1",
+  "timestamp": "2026-10-17 12:31:14 UTC",
+  "checks": [
+    {
+      "command": "ruff check .",
+      "output": "All checks passed!\n",
+      "returncode": 0
+    },
+    {
+      "command": "ruff format --check .",
+      "output": "34 files already formatted\n",
+      "returncode": 0
+    }
+  ]
+}

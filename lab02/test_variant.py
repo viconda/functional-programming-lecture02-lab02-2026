@@ -19,7 +19,9 @@ class FilmQueryTests(unittest.TestCase):
         """Набор является кортежем как минимум из 12 пятиэлементных записей."""
         self.assertIsInstance(FILMS, tuple)
         self.assertGreaterEqual(len(FILMS), 12)
-        self.assertTrue(all(isinstance(film, tuple) and len(film) == 5 for film in FILMS))
+        self.assertTrue(
+            all(isinstance(film, tuple) and len(film) == 5 for film in FILMS)
+        )
 
     def test_duration_strict_boundary(self) -> None:
         """120 минут не удовлетворяет условию, 121 минута удовлетворяет."""
