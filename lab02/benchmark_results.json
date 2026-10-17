@@ -1,0 +1,57 @@
+{
+  "measured_at_utc": "2026-10-17T12:16:37.719615+00:00",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "implementation": "CPython",
+  "platform": "Windows-11-10.0.26100-SP0",
+  "processor": "AMD64 Family 25 Model 116 Stepping 1, AuthenticAMD",
+  "limit_inclusive": 10000000,
+  "number_of_even_values": 5000000,
+  "timeit_number": 1,
+  "timeit_repeat": 3,
+  "timing_has_tracemalloc": false,
+  "expected_result": 166666716666670000000,
+  "methods": [
+    {
+      "id": "loop",
+      "title": "Цикл с аккумулятором",
+      "seconds": [
+        0.33035050006583333,
+        0.3256155999843031,
+        0.3291168001014739
+      ],
+      "median_seconds": 0.3291168001014739,
+      "minimum_seconds": 0.3256155999843031,
+      "result": 166666716666670000000,
+      "current_bytes": 40,
+      "peak_bytes": 176
+    },
+    {
+      "id": "list",
+      "title": "Списковое включение + sum",
+      "seconds": [
+        0.6319276001304388,
+        0.6095088000874966,
+        0.6200133999809623
+      ],
+      "median_seconds": 0.6200133999809623,
+      "minimum_seconds": 0.6095088000874966,
+      "result": 166666716666670000000,
+      "current_bytes": 96,
+      "peak_bytes": 203947736
+    },
+    {
+      "id": "generator",
+      "title": "Генераторное выражение + sum",
+      "seconds": [
+        0.7100227999035269,
+        0.787462200038135,
+        0.644315900048241
+      ],
+      "median_seconds": 0.7100227999035269,
+      "minimum_seconds": 0.644315900048241,
+      "result": 166666716666670000000,
+      "current_bytes": 40,
+      "peak_bytes": 536
+    }
+  ]
+}
